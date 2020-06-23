@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var tip = 0.10
     var numberOfPeople = 2
     var billTotal = 0.0
+    var resultTo2DecimalPlaces: String = ""
     
     @IBOutlet weak var billTextField: UITextField!
     
@@ -67,11 +68,22 @@ class ViewController: UIViewController {
         
         let payPerPerson = billTotal * (1 + tip) / Double(numberOfPeople)
         
-        let resultTo2DecimalPlaces = String(format: "%.2f", payPerPerson)
+        resultTo2DecimalPlaces = String(format: "%.2f", payPerPerson)
         
-        print(resultTo2DecimalPlaces)
+        //print(resultTo2DecimalPlaces)
+        
+        self.performSegue(withIdentifier: "goToNext", sender: self)
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToNext" {
+            
+            let destinationVC = segue.destination as! ResultViewController
+            destinationVC.resultText = resultTo2DecimalPlaces
+            
+            
+        }
+    }
 }
 

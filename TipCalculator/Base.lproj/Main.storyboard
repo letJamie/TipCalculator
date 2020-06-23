@@ -186,6 +186,7 @@
                         <outlet property="tenPctButton" destination="epm-Ow-SW6" id="yNo-qv-bj1"/>
                         <outlet property="twentyPctButton" destination="QFK-4U-5Qb" id="ocH-dI-Pv3"/>
                         <outlet property="zeroPctButton" destination="sl4-V6-Ylh" id="cHB-DR-SVn"/>
+                        <segue destination="7Z9-ia-gwG" kind="presentation" identifier="goToNext" id="1Sh-D4-Zif"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -197,7 +198,7 @@
             <objects>
                 <viewController id="7Z9-ia-gwG" customClass="ResultViewController" customModule="TipCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4kf-Y8-3Fj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BP8-wb-KmZ">
@@ -234,7 +235,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGS-IE-84J">
-                                <rect key="frame" x="107" y="808" width="200" height="54"/>
+                                <rect key="frame" x="107" y="754" width="200" height="54"/>
                                 <color key="backgroundColor" red="0.29527125129999998" green="0.69140161259999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="1Ng-Xd-TiK"/>
